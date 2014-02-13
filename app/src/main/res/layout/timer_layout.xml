@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/timer_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/timer_text_default"
+        android:layout_marginTop="@dimen/margin_top"
+        android:textSize="@dimen/text_size_ultra_large"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/timer_start_button"
+        android:text="@string/start_title_button"
+        android:layout_below="@id/timer_textview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/alarm_margin_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startTimer"/>
+<Button
+        android:id="@+id/timer_stop_button"
+        android:text="Stopp"
+        android:layout_below="@id/timer_textview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/alarm_margin_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="stopTimer"/>
+
+</RelativeLayout>

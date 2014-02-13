@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="se.skuggla.ui.MainActivity.MainFragment">
+
+    <TextView
+        android:id="@+id/stopwatch_value"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/default_stopwatch_value"
+        android:textSize="@dimen/text_size_large" />
+
+    <Button
+        android:id="@+id/lap_stopwatch_button"
+        android:text="@string/lap_title_button"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_below="@id/stopwatch_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="saveLapStopwatch" />
+
+    <Button
+        android:id="@+id/start_stop_stopwatch_button"
+        android:text="@string/start_title_button"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_below="@id/stopwatch_value"
+        android:layout_toRightOf="@id/lap_stopwatch_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startStopStopwatch" />
+
+    <Button
+        android:id="@+id/stop_stopwatch_button"
+        android:text="@string/stop_title_button"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_toRightOf="@id/start_stop_stopwatch_button"
+        android:layout_below="@id/stopwatch_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="stopStopwatch" />
+
+    <Button
+        android:id="@+id/reset_stopwatch_button"
+        android:text="@string/reset_title_button"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_below="@id/stopwatch_value"
+        android:layout_toRightOf="@id/stop_stopwatch_button"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="resetStopwatch" />
+
+    <ListView
+        android:id="@+id/lap_list"
+        android:layout_below="@id/start_stop_stopwatch_button"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
